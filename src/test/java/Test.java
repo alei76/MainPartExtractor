@@ -2,6 +2,7 @@
 //
 
 import Extractors.Extractors;
+import Extractors.Main;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,15 +11,6 @@ import java.net.URL;
 
 public class Test {
     public static void main(String[] args) throws IOException{
-
-//		Resource res = new Resource();
-//		String userwords = res.getResource("userwords.txt");
-//
-//		Resource res1 = new Resource();
-//		String chinesePCFG = res1.getResource("chinesePCFG.ser");
-//
-//		Function.setModel(chinesePCFG,
-//				userwords);
 
         Extractors.setModel("src/main/resources/chinesePCFG.ser",
                 "src/main/resources/userwords.txt");
@@ -49,5 +41,7 @@ public class Test {
         }
         System.out.println(Extractors.trunkhankey("这个项目由我改善",
                 "src/main/resources/deprules.txt", false));
+
+        System.out.println(Main.main("这个项目由我改善"));
     }
 }

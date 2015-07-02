@@ -12,7 +12,7 @@ public class StanfordParser {
 
 	public void setModel(String model) {
 		this.lp = LexicalizedParser.loadModel(model);
-		Log.log("�����ķ�:" + model);
+		Log.log("Loading parser from serialized file" + model);
 	}
 
 	private static class StanfordParserFactory {
